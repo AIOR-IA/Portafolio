@@ -11,12 +11,16 @@
     --text-nav:#909096;
     --text-secondary:#47E591;
     --bg-cards:#2A2A2A;
+    scrollbar-color: var(--text-secondary) rgb(16, 17, 20) !important;
+  scrollbar-width: thin !important;
     
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-color: var(--text-secondary) var(--bg-nav);
+    scrollbar-width: 10px;
 }
 body{
     background-color: var(--bg-main);
@@ -24,7 +28,14 @@ body{
     user-select: none;
     width: 100vw;
     overflow-x: hidden;
+    
+    
 }
+
+
+/**
+* *PARTICLES
+*/
 #particles-js {
     
     width: calc(100vw - 8rem);
@@ -459,6 +470,10 @@ ul li {
     position: relative;
     align-items: center;
     overflow: hidden;
+    background-color: #1D1D1D;
+opacity: 1;
+background: radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#2A2A2A 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #2A2A2A 1.4000000000000001px, #1D1D1D 1.4000000000000001px) -0.7000000000000001px 0;
+background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 }
 #section-work .cards-works{
     z-index: 10;
@@ -562,6 +577,7 @@ ul li {
     
     position: relative;
     overflow: hidden;
+    
 }
 #section-contact .contact-map{
     
@@ -625,8 +641,11 @@ ul li {
     text-shadow: 0rem 0rem 4.5rem var(--text-main);
     color: var(--text-nav);
 }
-
+/** MAPS
+*/
 #map {
     height: 100vh;
     width: 100%;
-  }
+}
+
+
