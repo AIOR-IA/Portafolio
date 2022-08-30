@@ -21,21 +21,18 @@ body{
     background-color: var(--bg-main);
     font-family: "Open Sans",sans-serif;
     user-select: none;
+    width: 100vw;
+    overflow-x: hidden;
 }
 #particles-js {
-    /* background-color: purple; */
-    /* width: 100vw; */
+    
     width: calc(100vw - 8rem);
     margin-left: 8rem;
     height: 99vh;
     z-index: 15;
-    /* background-color: #1d1d1d; */
-       
-    /* background-position: center;
-    background-size: cover; */
     overflow-x: hidden;
 }
-.center-text {
+#particles-js .center-text {
     margin-top: 14.5rem;
     z-index: 10;
     position: absolute;
@@ -68,6 +65,7 @@ h1 span{
     margin: 0;
 }
 h1 span:hover{
+    text-shadow: 0rem 0rem 3rem var(--text-secondary);
     color: var(--text-secondary);
     animation: animate 0.5s ease-out;
 }
@@ -83,7 +81,7 @@ h1 span:hover{
         transform: scale(1.1,0.9);
     }
 }
-.center-text p{
+#particles-js .center-text p{
     padding-top: 2rem;
     padding-bottom: 4rem;
     color: var(--text-nav);
@@ -91,7 +89,7 @@ h1 span:hover{
     font-size: 1rem;
     font-weight: 200;
 }
-.center-text a{
+#particles-js .center-text a{
     height: 3.5rem;
     width: 14rem;
     font-size: 0.9rem;
@@ -104,15 +102,15 @@ h1 span:hover{
     text-align: center;
     overflow: hidden;
 }
-.center-text a span{
+#particles-js .center-text a span{
     line-height: 3.5rem;
 }
-.center-text a:hover .bg-contact{
+#particles-js .center-text a:hover .bg-contact{
     
     transition: 0.4s ease;
     left: -1rem;
 }
-.center-text a:hover {
+#particles-js .center-text a:hover {
     box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
 -webkit-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
 -moz-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
@@ -138,6 +136,7 @@ h1 span:hover{
     left: 0;
     z-index: 5;
 }
+/* NAVBAR */
 .main-menu{
     text-align: center;
     background-color: var(--bg-nav);
@@ -151,6 +150,7 @@ h1 span:hover{
     position: fixed;
 
 }
+
 a{
     text-decoration: none;
     
@@ -206,4 +206,205 @@ ul li {
     color: var(--text-secondary);
     text-shadow: 0rem 0rem 2.5rem var(--text-secondary);
     background-color:  rgba(85, 85, 85, 0.2);
+}
+
+
+/* SECTION-ABOUT */
+#section-about{
+    width: calc(100vw - 8rem);
+    margin-left: 8rem;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+#section-about .effect-sphere{
+    
+    z-index: 10;
+    position: absolute;
+    width: 65%;
+    height: 100vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#section-about .center-text {
+    z-index: 10;
+    position: absolute;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 4.5rem;
+    animation: enter-text 3s ease;
+    
+}
+#section-about h2 {
+    text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+#section-about h2 span{
+    font-family: 'Coolvetica' !important;
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 5rem;
+    display: inline-block;
+    line-height: 5rem;
+    padding: 0;
+    margin: 0;
+}
+#section-about h2 span:hover{
+    animation: animate 0.5s ease-out;
+}
+#section-about .center-text p{
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: "Open Sans",sans-serif;;
+}
+#section-about .center-text a{
+    color: var(--text-secondary);
+    transition: 0.3s ease;
+}
+#section-about .center-text a:hover{
+    text-shadow: 0rem 0rem 4.5rem var(--text-main);
+    color: var(--text-nav);
+}
+/* SECTION-ABOUT SPHERE-TEXT */
+.tagcloud {
+    font-family: 'Coolvetica';
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-shadow: 0rem 0rem 2.5rem var(--text-secondary);
+  }
+  /* Change color of each text in sphere on hover   */
+  .tagcloud--item:hover {
+    color: var(--text-nav) ;
+    text-shadow: 0rem 0rem 3.5rem var(--text-main);
+  }
+  
+  /* SECTION-SKILLS */
+#section-skills{
+    width: calc(100vw - 8rem);
+    margin-left: 8rem;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+#section-skills .skills-details{
+    
+    z-index: 10;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+#section-skills .center-text {
+    z-index: 10;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 4.5rem;
+    animation: enter-text 3s ease;
+    
+}
+#section-skills h2 {
+    text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+#section-skills h2 span{
+    font-family: 'Coolvetica' !important;
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 5rem;
+    display: inline-block;
+    line-height: 5rem;
+    padding: 0;
+    margin: 0;
+}
+#section-skills h2 span:hover{
+    animation: animate 0.5s ease-out;
+}
+#section-skills .center-text p{
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-family: "Open Sans",sans-serif;;
+}
+#section-skills .center-text a{
+    color: var(--text-secondary);
+    transition: 0.3s ease;
+}
+#section-about .center-text a:hover{
+    text-shadow: 0rem 0rem 4.5rem var(--text-main);
+    color: var(--text-nav);
+}
+
+.charts{
+    height: 2rem;
+    font-family: 'Coolvetica';
+    color: var(--text-main);
+    width: 90%;
+    font-size: 1.2rem;
+    border-bottom: 1.8px solid rgba(255, 255, 255, 1);
+    margin-bottom: 1rem;
+    position: relative;
+}
+.charts-range{
+    
+    height: 3px;
+    background-color: var(--text-secondary);
+    position: absolute;
+    bottom: -3px;
+}
+.skills-details .charts:nth-child(1) .charts-range{
+    width: 90%;
+    background-color: var(--text-secondary);
+}
+
+.skills-details .charts:nth-child(2) .charts-range{
+    width: 80%;
+    background-color: red;
+}
+
+.skills-details .charts:nth-child(3) .charts-range{
+    width: 20%;
+    background-color: lime;
+    opacity: 1 !important;
+}
+.skills-details .charts:nth-child(4) .charts-range{
+    width: 80%;
+    background-color: purple;
+}
+.skills-details .charts:nth-child(5) .charts-range{
+    width: 50%;
+    background-color: yellow;
+}
+.skills-details .charts:nth-child(6) .charts-range{
+    width: 20%;
+    background-color: skyblue;
 }
