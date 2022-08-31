@@ -41,10 +41,9 @@
                 <span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
             </h1>
             <p>Front End  Developer</p>
-            <a href="">
+            <a href="#section-contact">
                 <span class="span-contact">Contact me!</span>
                 <span class="bg-contact"></span>
-
 
             </a>
         </div>
@@ -122,10 +121,25 @@
         <div class="center-text">
            
             <h2>
-                <span>C</span><span>o</span><span >n</span><span>t</span><span>a</span><span>c</span><span>t</span>            
+                <span>C</span><span>o</span><span >n</span><span>t</span><span>a</span><span>c</span><span>t</span> <span></span> <span>m</span><span>e</span>           
             </h2>
+            <p>I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.</p>
+            
             <div class="contact-form">
-                
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <div>
+                        <input type="text" id="username" placeholder="Name" required>
+                        <input type="email" id="useremail" placeholder="Email" required>
+                    </div>
+                    <input type="text" id="usersubject" placeholder="Subject" required>
+                    <textarea   rows="6" type="textarea" id="usermessage" placeholder="Message"></textarea>
+                    <div>
+                        <button type="submit">
+                            <span class="span-contact">Contact me!</span>
+                            <span class="bg-contact"></span>
+                        </button>
+                    </div>
+                </form>   
             </div>
         </div>
         <div class="contact-map">
@@ -136,17 +150,24 @@
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGhZTbyN1Pnxe2DKZz70FGUQ2nrPzYU6Y&callback=initMap">
     </script>
-
+    <!-- <script src="js/smtp.js"></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/SendEmail.js"></script>
     <!-- first particle.js -->
     <script src="js/particles.js" type="text/javascript"></script>
     <!-- second app.js -->
     <script src="js/app.js" type="text/javascript"></script>
 
+
     <script src="js/TagCloud.min.js" type="text/javascript"></script>
     <script src="js/TagSphere.js" type="text/javascript"></script>
 
+    <!-- Maps -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/Scroll.js"></script>
     <script src="js/Maps.js"></script>
+
+    <!-- Scroll -->
+    <script src="js/Scroll.js"></script>
+
 </body>
 </html>

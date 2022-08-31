@@ -2,6 +2,10 @@
     font-family: Coolvetica;
     src: url("../assets/fonts/coolvetica/coolvetica\ rg.otf") format("opentype");
 }
+@font-face {
+    font-family: LaBelleAurore;
+    src: url("../assets/fonts/LaBelleAurore/labelleaurore/LaBelleAurore.ttf") format("truetype");
+}
 
 :root{
     --bg-main:#1D1D1D;
@@ -19,8 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scrollbar-color: var(--text-secondary) var(--bg-nav);
-    scrollbar-width: 10px;
+   
 }
 body{
     background-color: var(--bg-main);
@@ -119,7 +122,7 @@ h1 span:hover{
 }
 #particles-js .center-text a:hover .bg-contact{
     
-    transition: 0.4s ease;
+    transition: 0.3s ease;
     left: -1rem;
 }
 #particles-js .center-text a:hover {
@@ -240,8 +243,9 @@ ul li {
     height: 100vh;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+    padding-right: 5rem;
 }
 #section-about .center-text {
     z-index: 10;
@@ -540,7 +544,7 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
     color: var(--text-nav);
 }
 .card-work{
-    background-color: black;
+    background-color: var(--bg-nav);
     height: 20rem;
     width: 20rem;
     overflow: hidden;
@@ -583,18 +587,17 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
     
     z-index: 10;
     position: absolute;
-    width: 50%;
+    width: 45%;
     height: 100vh;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }
 #section-contact .center-text {
     z-index: 10;
     position: absolute;
-    width: 40%;
+    width: 45%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -648,4 +651,72 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
     width: 100%;
 }
 
+
+/**
+**FORM
+*/
+.contact-form{
+    margin-top: 2rem;
+    height: 30%;
+    width: 100%;
+}
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+form{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+form input, form textarea{
+    border: 0;
+    margin: 5px 0;
+    padding: 10px 20px;
+    outline: none;
+    background-color: var(--bg-cards);
+    color: var(--text-nav);
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+form div input{
+    width: 50%;
+}
+form input{
+    height: 3rem;
+}
+.contact-form form button{
+    margin-top: 2rem;
+    height: 3.5rem;
+    width: 14rem;
+    font-size: 0.9rem;
+    letter-spacing: 6px;
+    background: black;
+    color: var(--text-secondary);
+    border: 0.5px solid var(--text-secondary);
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    
+}
+form button span{
+    top: 0;
+    line-height: 3.5rem;
+}
+form button:hover .bg-contact{
+    
+    transition: 0.2s ease;
+    left: -1rem;
+}
+form button:hover {
+    box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
+-webkit-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
+-moz-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
+    color: black;
+    transition: 0.2s ease;
+}
 
