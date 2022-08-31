@@ -13,6 +13,7 @@
     --text-main:#FFFFFF;
     --text-title:#08FDD8;
     --text-nav:#909096;
+    --text-navrgba:rgba(144,144,150,0.7);
     --text-secondary:#47E591;
     --bg-cards:#2A2A2A;
     scrollbar-color: var(--text-secondary) rgb(16, 17, 20) !important;
@@ -37,6 +38,148 @@ body{
 
 
 /**
+* *PARTICLES tags
+*/
+.span-html{
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+}
+#particles-js .span-top{
+    line-height:3rem ;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    align-items: center;
+    position: relative;
+}
+#particles-js .span-top::after{
+    content: '<body>';
+    margin-top: 4rem;
+    margin-left: 3rem;
+    position: absolute;
+}
+#particles-js .center-text div{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#particles-js .center-text h1::before{
+    content: '<h1>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1.2rem;
+    left: -1rem;
+    font-weight: 100;
+}
+#particles-js .center-text h1::after{
+    content: '</h1>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+#particles-js .center-text p::before{
+    content: '<p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    letter-spacing: 0;
+}
+#particles-js .center-text p::after{
+    content: '</p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -1rem;
+    bottom: 0rem;
+    letter-spacing: 0;
+}
+/*********** ARROWS SCROLL ************/
+.scroll-arrow-right{
+    margin-right: 5px;
+    height: 10rem;
+    width: 2rem;
+    color: var(--text-main);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+    font-size: 0.95rem;
+}
+.scroll-arrow-right p{
+    width: 5.5rem;
+    position: relative;
+    animation: translate-arrow 3s linear infinite;
+}
+@keyframes translate-arrow {
+    0%{
+        transform: rotate(90deg) translateX(-30px);
+    }
+    25%{
+        transform: rotate(90deg) translateX(-15px);
+    }
+    50%{
+        transform: rotate(90deg) translateX(-30px);
+    }
+    75%{
+        transform: rotate(90deg) translateX(-15px);
+    }
+    100%{
+        transform: rotate(90deg) translateX(-30px);
+    }
+}
+.scroll-arrow-right i{
+    position: relative;
+    font-size: 0.9rem;
+}
+.scroll-arrow-left{
+    margin-left: 5px;
+    height: 10rem;
+    width: 2rem;
+    color: var(--text-main);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 8;
+    font-size: 0.95rem;
+}
+.scroll-arrow-left p{
+    width: 5.5rem;
+    position: relative;
+    animation: translate-arrow 3s linear infinite;
+}
+.scroll-arrow-left i{
+    position: relative;
+    font-size: 0.9rem;
+}
+/**
 * *PARTICLES
 */
 #particles-js {
@@ -48,7 +191,7 @@ body{
     overflow: hidden;
 }
 #particles-js .center-text {
-    margin-top: 14.5rem;
+    margin-top: 10.5rem;
     z-index: 10;
     position: absolute;
     width: 42rem;
@@ -59,6 +202,7 @@ body{
     justify-content: center;
     margin-left: 5rem;
     animation: enter-text 3s ease;
+    
 }
 @keyframes enter-text{
     0%{
@@ -97,14 +241,16 @@ h1 span:hover{
     }
 }
 #particles-js .center-text p{
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     color: var(--text-nav);
     letter-spacing: 7px;
     font-size: 1rem;
     font-weight: 200;
+    position: relative;
 }
 #particles-js .center-text a{
+    margin-top: 1.5rem;
     height: 3.5rem;
     width: 14rem;
     font-size: 0.9rem;
@@ -224,14 +370,63 @@ ul li {
     background-color:  rgba(85, 85, 85, 0.2);
 }
 
+/******* TAGS SECTION-ABOUT *******/
+#section-about .center-text div{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
 
+#section-about .center-text h2::before{
+    content: '<h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    left: -1rem;
+    font-weight: 100;
+}
+#section-about .center-text h2::after{
+    content: '</h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    margin-top: 4rem;
+    right: -3rem;
+}
+
+#section-about .center-text p:nth-child(2)::before{
+    content: '<p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    left: 4rem;
+    letter-spacing: 0;
+}
+#section-about .center-text p:nth-child(5)::after{
+    content: '</p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 4rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0;
+}
 /* SECTION-ABOUT */
 #section-about{
     width: 100%;
     padding-left: 8rem;
     height: 100vh;
     display: flex;
-    
     position: relative;
     overflow: hidden;
 }
@@ -239,7 +434,7 @@ ul li {
     
     z-index: 10;
     position: absolute;
-    width: 65%;
+    width: 55%;
     height: 100vh;
     right: 0;
     display: flex;
@@ -249,8 +444,8 @@ ul li {
 }
 #section-about .center-text {
     z-index: 10;
-    position: absolute;
-    width: 40%;
+    position: relative;
+    width: 45%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -311,7 +506,61 @@ ul li {
     text-shadow: 0rem 0rem 3.5rem var(--text-main);
   }
   
-  /* SECTION-SKILLS */
+
+/******* TAGS SECTION-SKILLS *******/
+#section-skills .center-text div{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#section-skills .center-text h2::before{
+    content: '<h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1.2rem;
+    left: -1rem;
+    font-weight: 100;
+}
+#section-skills .center-text h2::after{
+    content: '</h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+#section-skills .center-text p:nth-child(2)::before{
+    content: '<p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    left: 4rem;
+    letter-spacing: 0;
+}
+#section-skills .center-text p:nth-child(5)::after{
+    content: '</p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 4rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0;
+}
+
+
+  /******* SECTION-SKILLS *******/
 #section-skills{
     width: 100%;
     padding-left: 8rem;
@@ -324,7 +573,7 @@ ul li {
     
     z-index: 10;
     position: absolute;
-    width: 50%;
+    width: 45%;
     height: 100vh;
     right: 0;
     display: flex;
@@ -336,7 +585,7 @@ ul li {
 #section-skills .center-text {
     z-index: 10;
     position: absolute;
-    width: 40%;
+    width: 45%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -462,9 +711,61 @@ ul li {
     font-size: 0.8rem;
 }
 
-/**
-* * section-work
-*/
+
+/******* TAGS SECTION-WORKS *******/
+#section-work .center-text div{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#section-work .center-text h2::before{
+    content: '<h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1.2rem;
+    left: -1rem;
+    font-weight: 100;
+}
+#section-work .center-text h2::after{
+    content: '</h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+#section-work .center-text p:nth-child(2)::before{
+    content: '<p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    left: 4rem;
+    letter-spacing: 0;
+}
+#section-work .center-text p:nth-child(5)::after{
+    content: '</p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 4rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0;
+}
+
+
+/******* SECTION-WORKS *******/
 
 #section-work{
     width: 100%;
@@ -475,9 +776,8 @@ ul li {
     align-items: center;
     overflow: hidden;
     background-color: #1D1D1D;
-opacity: 1;
-background: radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#2A2A2A 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #2A2A2A 1.4000000000000001px, #1D1D1D 1.4000000000000001px) -0.7000000000000001px 0;
-background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
+    background: radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#2A2A2A 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #2A2A2A 1.4000000000000001px, #1D1D1D 1.4000000000000001px) -0.7000000000000001px 0;
+    background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 }
 #section-work .cards-works{
     z-index: 10;
@@ -545,8 +845,8 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 }
 .card-work{
     background-color: var(--bg-nav);
-    height: 20rem;
-    width: 20rem;
+    height: 18rem;
+    width: 18rem;
     overflow: hidden;
     
     
@@ -566,6 +866,101 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
     object-fit: cover;
     object-position: center;
     transition: transform 0.4s ease;
+}
+
+/** TAGS SECTION-CONTACT*/
+
+#section-contact .span-bottom{
+    
+    line-height:3rem ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    width: 3rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    position: relative;
+    bottom: 0;
+}
+#section-contact .span-bottom::before{
+    content: '</body>';
+    margin-top: -6rem;
+    margin-left: 3rem;
+    position: absolute;
+    bottom: 2rem;
+}
+#section-contact .center-text .title-contact{
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+#section-contact .center-text h2::before{
+    content: '<h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -1.2rem;
+    left: -1rem;
+    font-weight: 100;
+}
+#section-contact .center-text h2::after{
+    content: '</h2>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+#section-contact .center-text p::before{
+    content: '<p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    left: 4rem;
+    letter-spacing: 0;
+}
+#section-contact .center-text p::after{
+    content: '</p>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 4rem;
+    letter-spacing: 0;
+}
+#section-contact .center-text .contact-form::before{
+    content: '<form>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -1.8rem;
+    left: 5rem;
+    letter-spacing: 0;
+}
+#section-contact .center-text .contact-form::after{
+    content: '</form>';
+    color: var(--text-navrgba);
+    font-family: 'LaBelleAurore';
+    font-style: italic;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 5rem;
+    letter-spacing: 0;
 }
 
 
@@ -603,6 +998,7 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding-bottom: 12%;
     padding-left: 4.5rem;
     animation: enter-text 3s ease;
     
@@ -656,7 +1052,7 @@ background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 **FORM
 */
 .contact-form{
-    margin-top: 2rem;
+    margin-top:3rem;
     height: 30%;
     width: 100%;
 }
@@ -694,7 +1090,7 @@ form input{
     width: 14rem;
     font-size: 0.9rem;
     letter-spacing: 6px;
-    background: black;
+    background: var(--bg-main);
     color: var(--text-secondary);
     border: 0.5px solid var(--text-secondary);
     cursor: pointer;
