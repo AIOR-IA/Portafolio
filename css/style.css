@@ -435,7 +435,6 @@ h1 span:hover{
 .bg-contact{
     position: absolute;
     background-color: var(--text-secondary);
-    
     width: 16rem;
     height: 3.5rem;
     z-index: 4;
@@ -1164,14 +1163,14 @@ form div input{
 form input{
     height: 3rem;
 }
-.contact-form form button{
+.contact-form form #btn-send{
     margin-top: 2rem;
     height: 3.5rem;
     width: 14rem;
     font-size: 0.9rem;
     letter-spacing: 6px;
     background: var(--bg-main);
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     border: 0.5px solid var(--text-secondary);
     cursor: pointer;
     position: relative;
@@ -1179,23 +1178,32 @@ form input{
     overflow: hidden;
     
 }
-form button span{
+form #btn-send span{
     top: 0;
     line-height: 3.5rem;
 }
-form button:hover .bg-contact{
+form #btn-send:hover .bg-contact-form{
     
-    transition: 0.2s ease;
-    left: -1rem;
+    transition: 0.2s ease !important;
+    left: -1rem !important;
 }
-form button:hover {
-    box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
--webkit-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
--moz-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75);
-    color: black;
-    transition: 0.2s ease;
+form #btn-send:hover {
+    box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75) !important;
+-webkit-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75) !important;
+-moz-box-shadow: 10px 10px 82px -4px rgba(71,229,145,0.75) !important;
+    color: black !important;
+    transition: 0.2s ease !important;
 }
-
+.bg-contact-form{
+    position: absolute;
+    background-color: var(--text-secondary);
+    width: 16rem;
+    height: 3.5rem;
+    z-index: 4;
+    left: -16.5rem;
+    transform: skew(-20deg);
+    transition: 0.4s ease-in-out;
+}
 
 
 @media only screen and (max-width:1700px){

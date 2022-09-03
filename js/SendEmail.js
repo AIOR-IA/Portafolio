@@ -1,17 +1,46 @@
-function sendEmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "lenar.toledo@gmail.com",
-        // Password : "1DBC4EBBDE91687B7BA69AFD064C279E2F14",
-        Password:"foylwjvreyemxlyq",
-        To : 'lenar.toledo@gmail.com',
-        From : document.getElementById("useremail").value,
-        Subject : document.getElementById("usersubject").value,
-        Body : "Name: " + document.getElementById("username").value
-            + "<br> Email: " + + document.getElementById("useremail").value
-            + "<br> Subject: " + + document.getElementById("usersubject").value
-            + "<br> Message: " + + document.getElementById("usermessage").value
-    }).then(
-      message => alert("Message Sent Succesfully")
-    );
-}
+
+const names = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+  
+   
+   const serviceID = 'default_service';
+   const templateID = 'template_o6dhata';
+ 
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      
+      
+      names.value='';
+      email.value='';
+      subject.value='';
+      message.value='';
+      Swal.fire(
+        {
+          title:'SUCCESS',
+          text:'Your message has been sent',
+          icon:'success',
+          background:'rgba(30,30,30,1)',
+          color:'#fff',
+        }
+      )
+    }, (err) => {
+      
+      email.value='';
+      subject.value='';
+      message.value='';
+      Swal.fire(
+        {
+          title:'ERROR',
+          text:'Error: ' + err,
+          icon:'error',
+          background:'rgba(30,30,30,1)',
+          color:'#fff',
+        }
+      )
+    });
+});
