@@ -629,7 +629,7 @@ h1 span:hover{
     left: 4rem;
     letter-spacing: 0;
 }
-#section-skills .center-text p:nth-child(5)::after{
+#section-skills .center-text p:nth-child(4)::after{
     content: '</p>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -733,31 +733,23 @@ h1 span:hover{
     bottom: -3px;
 }
 .skills-details .charts:nth-child(1) .charts-range{
-    width: 90%;
+    width: 80%;
     background-color: var(--text-secondary);
 }
 
 .skills-details .charts:nth-child(2) .charts-range{
-    width: 80%;
+    width: 18%;
     background-color: red;
 }
 
 .skills-details .charts:nth-child(3) .charts-range{
-    width: 20%;
+    width: 80%;
     background-color: lime;
     opacity: 1 !important;
 }
 .skills-details .charts:nth-child(4) .charts-range{
-    width: 80%;
+    width: 15%;
     background-color: purple;
-}
-.skills-details .charts:nth-child(5) .charts-range{
-    width: 50%;
-    background-color: yellow;
-}
-.skills-details .charts:nth-child(6) .charts-range{
-    width: 20%;
-    background-color: skyblue;
 }
 .card-info{
     height: 15rem;
@@ -834,7 +826,7 @@ h1 span:hover{
     left: 4rem;
     letter-spacing: 0;
 }
-#section-work .center-text p:nth-child(5)::after{
+#section-work .center-text p:nth-child(3)::after{
     content: '</p>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -929,7 +921,30 @@ h1 span:hover{
     background-color: var(--bg-nav);
     height: 18rem;
     width: 18rem;
-    overflow: hidden; 
+    overflow: hidden;
+    position: relative;
+    
+}
+.card-work span{
+    position: absolute;
+    height: 0.3rem;
+    transform: skew(-30deg);
+    width: 20rem;
+    bottom: 0;
+    left: -21rem;
+    transition: all 0.2s ease;
+}
+.card-work:nth-child(1) span{
+    background-color: whitesmoke;
+}
+.card-work:nth-child(2) span{
+    background-color: purple;
+}
+.card-work:nth-child(3) span{
+    background-color: red;
+}
+.card-work:nth-child(4) span{
+    background-color: plum;
 }
 .card-work a {
     width: 100%;
@@ -947,7 +962,10 @@ h1 span:hover{
     object-position: center;
     transition: transform 0.4s ease;
 }
-
+.card-work:hover span{
+    transition: all 0.2s ease;
+    left: -1rem;
+}
 /** TAGS SECTION-CONTACT*/
 
 #section-contact .span-bottom{
