@@ -16,6 +16,7 @@
     --text-navrgba:rgba(144,144,150,0.7);
     --text-secondary:#47E591;
     --bg-cards:#2A2A2A;
+    
     scrollbar-color: var(--text-secondary) rgb(16, 17, 20) !important;
     scrollbar-width: thin !important;
 
