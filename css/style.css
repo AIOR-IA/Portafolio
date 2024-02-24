@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 @font-face {
     font-family: Coolvetica;
     src: url("../assets/fonts/coolvetica/coolvetica\ rg.otf") format("opentype");
@@ -16,7 +20,18 @@
     --text-navrgba:rgba(144,144,150,0.7);
     --text-secondary:#47E591;
     --bg-cards:#2A2A2A;
-    
+
+    --background-dif:#539E43;
+    --background-dif:#bd002e;
+    --background-dif:#3178C6;
+    --background-dif:#F6009C;
+    --background-dif:#764ABC;
+    --background-dif:#EF652A;
+    --background-dif:#30A9DC;
+    --background-dif:#F0DB4F;
+    --background-dif:#d9224c;
+    --background-dif:#e535ab;
+    --background-dif:#ce6b9c;
     scrollbar-color: var(--text-secondary) rgb(16, 17, 20) !important;
     scrollbar-width: thin !important;
 
@@ -1241,6 +1256,93 @@ form #btn-send:hover {
 }
 
 
+.stack {
+    position: relative; /* Necesario para posicionar los pseudo-elementos */
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-shadow: 0rem 0rem 4.5rem var(--text-secondary) !important; */
+}
+.stack h2 {
+    text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
+    font-family: 'Coolvetica' !important;
+    /* font-weight: 400; */
+    /* color: var(--text-secondary); */
+    font-size: 5rem;
+}
+.stack::before {
+    content: ''; /* Asegúrate de tener contenido para los pseudo-elementos */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el ancho del elemento .stack */
+    height: 100%; 
+    background-color: var(--background-dif);
+    padding: 0;
+    margin-bottom: 1.5rem;
+    opacity: 0.2;
+    border-radius: 10px;
+    
+    filter:  brightness(90%) blur(2px) drop-shadow(0 0 2px var(--background-dif)) ;
+    border: 1px solid var(--background-dif);
+   
+}
+
+.stack::after {
+    content: ''; /* Asegúrate de tener contenido para los pseudo-elementos */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el ancho del elemento .stack */
+    height: 100%; /* Cubre todo el alto del elemento .stack */
+    opacity: 0.5;
+    text-shadow: 0rem 0rem 3.5rem red !important; /* Cambia la opacidad como desees */
+    padding: 0;
+    margin-bottom: 1.5rem;
+    filter:  none;
+}
+
+.stack img {
+    height: 100%;
+
+}
+.stack:hover {
+    /* border-color: #bd002e; */
+    border-radius: 10px;
+    border: 0.2px solid var(--background-dif);
+    -webkit-box-shadow: -2px -2px 30px 2px var(--background-dif);
+    -moz-box-shadow: -2px -2px 30px 2px var(--background-dif);
+    box-shadow: -2px -2px 30px 2px var(--background-dif);
+}
+
+.skills-icons{
+    background-image: url("../assets/img/noise.png");
+    background-size: 350px; /* Ajusta este valor para cambiar el "zoom" de la imagen */
+    background-repeat: repeat; 
+}
+.stack:hover tool-tip {
+    opacity: 1;
+}
+
+tool-tip {
+    opacity: 0;
+    position: absolute;
+    bottom: 100%; /* Coloca el tooltip encima del elemento */
+    left: 50%; /* Centra el tooltip */
+    transform: translateX(-50%);
+    color: var(--background-dif);
+    border-radius: 5px;
+    border: 0.2px solid var(--background-dif);
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+  
 @media only screen and (max-width:1700px){
     #section-about .effect-sphere{
         padding-right: 4rem;
