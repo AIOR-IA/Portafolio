@@ -21,17 +21,23 @@
     --text-secondary:#47E591;
     --bg-cards:#2A2A2A;
 
-    --background-dif:#539E43;
-    --background-dif:#bd002e;
-    --background-dif:#3178C6;
-    --background-dif:#F6009C;
-    --background-dif:#764ABC;
     --background-dif:#EF652A;
-    --background-dif:#30A9DC;
+    --background-dif:#3178C6;
     --background-dif:#F0DB4F;
-    --background-dif:#d9224c;
-    --background-dif:#e535ab;
+    --background-dif:#c3002f;
+    --background-dif:#ea378e;
+    --background-dif:#007acc;
     --background-dif:#ce6b9c;
+    --background-dif:#0db7ed;
+    --background-dif:#ba2bd2;
+    --background-dif:#539e43;
+    --background-dif:#e535ab;
+    --background-dif:#ea2845;
+    --background-dif:#2f6792;
+    --background-dif:#ee513b;
+    --background-dif:#563d7c;
+
+    
     scrollbar-color: var(--text-secondary) rgb(16, 17, 20) !important;
     scrollbar-width: thin !important;
 
@@ -622,12 +628,12 @@ h1 span:hover{
   
 
 /******* TAGS SECTION-SKILLS *******/
-#section-skills .center-text div{
+#section-skills .container-skills .center-text div{
     margin-bottom: 1.5rem;
     position: relative;
 }
 
-#section-skills .center-text h2::before{
+#section-skills .container-skills .center-text h2::before{
     content: '<h2>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -638,7 +644,7 @@ h1 span:hover{
     left: -1rem;
     font-weight: 100;
 }
-#section-skills .center-text h2::after{
+#section-skills .container-skills .center-text h2::after{
     content: '</h2>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -650,7 +656,7 @@ h1 span:hover{
     right: -3rem;
 }
 
-#section-skills .center-text p:nth-child(2)::before{
+#section-skills .container-skills .center-text p:nth-child(2)::before{
     content: '<p>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -661,7 +667,7 @@ h1 span:hover{
     left: 4rem;
     letter-spacing: 0;
 }
-#section-skills .center-text p:nth-child(4)::after{
+#section-skills .container-skills .center-text p:nth-child(4)::after{
     content: '</p>';
     color: var(--text-navrgba);
     font-family: 'LaBelleAurore';
@@ -680,15 +686,16 @@ h1 span:hover{
     padding-left: 8rem;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
 }
-#section-skills .skills-details{
+#section-skills .container-skills .skills-details{
     
     z-index: 10;
     position: absolute;
     width: 45%;
-    height: 100vh;
+    height:90vh;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -696,11 +703,11 @@ h1 span:hover{
     align-items: flex-start;
     gap: 10px;
 }
-#section-skills .center-text {
+#section-skills .container-skills .center-text {
     z-index: 10;
     position: absolute;
     width: 45%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -708,6 +715,99 @@ h1 span:hover{
     padding-left: 4.5rem;
     animation: enter-text 3s ease;
     
+}
+#section-skills .container-skills {
+    z-index: 10;
+    /* position: absolute; */
+    height: 80vh;
+    width: 100%;
+    top: -252px;
+    left: 0;
+}
+#section-skills .skills-tools {
+    z-index: 12;
+    position: relative;
+    /* width: 100%;
+    height: 40vh; */
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 4.5rem;
+    padding-right: 2.5rem;
+    animation: enter-text 3s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; */
+} 
+
+
+.stack {
+    position: relative; /* Necesario para posicionar los pseudo-elementos */
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid transparent;
+    /* text-shadow: 0rem 0rem 4.5rem var(--text-secondary) !important; */
+}
+
+.stack::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--background-dif);
+    padding: 0;
+    margin-bottom: 1.5rem;
+    opacity: 0.2;
+    border-radius: 10px;
+    filter:  brightness(90%) blur(2px) drop-shadow(0 0 2px var(--background-dif)) ;
+    border: 1px solid var(--background-dif);
+
+}
+
+.stack img {
+    height: 100%;
+
+}
+.stack:hover {
+    /* border-color: #bd002e; */
+    border-radius: 10px;
+    border: 0.2px solid var(--background-dif);
+    -webkit-box-shadow: -2px -2px 30px 2px var(--background-dif);
+    -moz-box-shadow: -2px -2px 30px 2px var(--background-dif);
+    box-shadow: -2px -2px 30px 2px var(--background-dif);
+}
+
+.skills-icons{
+    background-image: url("../assets/img/noise.png");
+    background-size: 350px; /* Ajusta este valor para cambiar el "zoom" de la imagen */
+    background-repeat: repeat; 
+}
+.stack:hover tool-tip {
+    opacity: 1;
+}
+
+tool-tip {
+    opacity: 0;
+    position: absolute;
+    bottom: 100%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    color: var(--background-dif);
+    border-radius: 5px;
+    border: 0.2px solid var(--background-dif);
+    padding: 0.25rem 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: all 0.5s ease;
+    text-shadow: -3px -4px 12px var(--background-dif);
+
 }
 #section-skills h2 {
     text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
@@ -727,7 +827,7 @@ h1 span:hover{
 #section-skills h2 span:hover{
     animation: animate 0.5s ease-out;
 }
-#section-skills .center-text p{
+#section-skills .container-skills .center-text p{
     padding-right: 4rem;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
@@ -738,7 +838,7 @@ h1 span:hover{
     line-height: 1.4rem;
     font-family: "Open Sans",sans-serif;;
 }
-#section-skills .center-text a{
+#section-skills .container-skills .center-text a{
     color: var(--text-secondary);
     transition: 0.3s ease;
 }
@@ -912,6 +1012,7 @@ h1 span:hover{
     animation: enter-text 3s ease;
     
 }
+
 #section-work h2 {
     text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
     padding: 0;
@@ -1256,92 +1357,7 @@ form #btn-send:hover {
 }
 
 
-.stack {
-    position: relative; /* Necesario para posicionar los pseudo-elementos */
-    height: 4.5rem;
-    width: 4.5rem;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-shadow: 0rem 0rem 4.5rem var(--text-secondary) !important; */
-}
-.stack h2 {
-    text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
-    font-family: 'Coolvetica' !important;
-    /* font-weight: 400; */
-    /* color: var(--text-secondary); */
-    font-size: 5rem;
-}
-.stack::before {
-    content: ''; /* Asegúrate de tener contenido para los pseudo-elementos */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0;
-    left: 0;
-    width: 100%; /* Cubre todo el ancho del elemento .stack */
-    height: 100%; 
-    background-color: var(--background-dif);
-    padding: 0;
-    margin-bottom: 1.5rem;
-    opacity: 0.2;
-    border-radius: 10px;
-    
-    filter:  brightness(90%) blur(2px) drop-shadow(0 0 2px var(--background-dif)) ;
-    border: 1px solid var(--background-dif);
-   
-}
 
-.stack::after {
-    content: ''; /* Asegúrate de tener contenido para los pseudo-elementos */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0;
-    left: 0;
-    width: 100%; /* Cubre todo el ancho del elemento .stack */
-    height: 100%; /* Cubre todo el alto del elemento .stack */
-    opacity: 0.5;
-    text-shadow: 0rem 0rem 3.5rem red !important; /* Cambia la opacidad como desees */
-    padding: 0;
-    margin-bottom: 1.5rem;
-    filter:  none;
-}
-
-.stack img {
-    height: 100%;
-
-}
-.stack:hover {
-    /* border-color: #bd002e; */
-    border-radius: 10px;
-    border: 0.2px solid var(--background-dif);
-    -webkit-box-shadow: -2px -2px 30px 2px var(--background-dif);
-    -moz-box-shadow: -2px -2px 30px 2px var(--background-dif);
-    box-shadow: -2px -2px 30px 2px var(--background-dif);
-}
-
-.skills-icons{
-    background-image: url("../assets/img/noise.png");
-    background-size: 350px; /* Ajusta este valor para cambiar el "zoom" de la imagen */
-    background-repeat: repeat; 
-}
-.stack:hover tool-tip {
-    opacity: 1;
-}
-
-tool-tip {
-    opacity: 0;
-    position: absolute;
-    bottom: 100%; /* Coloca el tooltip encima del elemento */
-    left: 50%; /* Centra el tooltip */
-    transform: translateX(-50%);
-    color: var(--background-dif);
-    border-radius: 5px;
-    border: 0.2px solid var(--background-dif);
-    padding: 0.3rem 0.8rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.5s ease;
-}
   
 @media only screen and (max-width:1700px){
     #section-about .effect-sphere{
@@ -1399,13 +1415,13 @@ tool-tip {
         padding-left: 0rem;
     }
 
-    #section-skills .skills-details{
+    #section-skills .container-skills .skills-details{
     
         
         width: 50%;
         height: 100%;
     }
-    #section-skills .center-text {
+    #section-skills .container-skills .center-text {
         
         width: 50%;
         height: 100%;
@@ -1436,7 +1452,7 @@ tool-tip {
         font-size: 3.5rem;
         line-height: 3.5rem;
     }
-    #section-skills .center-text {   
+    #section-skills .container-skills .center-text {   
         padding-left: 3rem;
     }
     #section-skills h2 span{   
@@ -1484,7 +1500,7 @@ tool-tip {
         flex-direction: column;
         justify-content: center;
     }
-    #section-skills .skills-details{
+    #section-skills .container-skills .skills-details{
         
         position: relative;
         width: 100%;
@@ -1493,7 +1509,7 @@ tool-tip {
         padding-left: 4rem;
         margin-top: 1.5rem;
     }
-    #section-skills .center-text {
+    #section-skills .container-skills .center-text {
         z-index: 10;
         position: relative;
         width: 100%;
@@ -1656,7 +1672,7 @@ tool-tip {
         font-size: 2.5rem;
         line-height: 2.5rem;
     }
-    #section-skills .center-text {   
+    #section-skills .container-skills .center-text {   
         padding-left: 2rem;
     }
     #section-skills h2 span{   
