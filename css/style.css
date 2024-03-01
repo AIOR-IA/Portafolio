@@ -306,7 +306,7 @@ ul li {
 }
 /*********** ARROWS SCROLL ************/
 .scroll-arrow-right{
-    margin-right: 5px;
+    margin-right: 10px;
     height: 10rem;
     width: 2rem;
     color: var(--text-main);
@@ -358,7 +358,7 @@ ul li {
     align-items: center;
     position: absolute;
     bottom: 1.5rem;
-    left: 8;
+    left: 8rem;
     font-size: 0.95rem;
 }
 .scroll-arrow-left p{
@@ -489,6 +489,9 @@ h1 span:hover{
     z-index: 5;
 }
 
+#particles-js .scroll-arrow-left {
+    left: 0rem;
+} 
 /******* TAGS SECTION-ABOUT *******/
 #section-about .center-text div{
     margin-bottom: 1.5rem;
@@ -742,7 +745,7 @@ h1 span:hover{
 
 
 .stack {
-    position: relative; /* Necesario para posicionar los pseudo-elementos */
+    position: relative;
     height: 4.5rem;
     width: 4.5rem;
     border-radius: 10px;
@@ -955,7 +958,7 @@ tool-tip {
     font-size: 1.2rem;
     position: absolute;
     margin-top: -1.2rem;
-    left: 4rem;
+    left: 28%;
     letter-spacing: 0;
 }
 #section-work .center-text p:nth-child(3)::after{
@@ -965,7 +968,7 @@ tool-tip {
     font-style: italic;
     font-size: 1.2rem;
     position: absolute;
-    left: 4rem;
+    left: 28%;
     margin-top: 1.5rem;
     letter-spacing: 0;
 }
@@ -976,20 +979,24 @@ tool-tip {
 #section-work{
     width: 100%;
     padding-left: 8rem;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
+    flex-direction: column;
     position: relative;
     align-items: center;
     overflow: hidden;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     background-color: #1D1D1D;
     background: radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#2A2A2A 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #2A2A2A 1.4000000000000001px, #1D1D1D 1.4000000000000001px) -0.7000000000000001px 0;
     background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
 }
 #section-work .cards-works{
     z-index: 10;
-    position: absolute;
-    width: 50%;
-    height: 80%;
+    /* position: absolute; */
+    width: 90%;
+    /* height: 80%; */
+    margin-top: 1rem;
     right: 0;
     display: flex;
     flex-direction: row;
@@ -1001,22 +1008,25 @@ tool-tip {
 }
 #section-work .center-text {
     z-index: 10;
-    position: absolute;
-    width: 45%;
-    height: 100vh;
+    /* position: absolute; */
+    width: 50%;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    padding-left: 4.5rem;
+    /* padding-left: 4.5rem; */
     animation: enter-text 3s ease;
-    
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
 }
 
 #section-work h2 {
     text-shadow: 0rem 0rem 4.5rem var(--text-secondary);
     padding: 0;
     margin-bottom: 1.5rem;
+    
 }
 #section-work h2 span{
     font-family: 'Coolvetica' !important;
@@ -1056,7 +1066,15 @@ tool-tip {
     width: 18rem;
     overflow: hidden;
     position: relative;
+   
     
+}
+.card-work:hover {
+    border-radius: 10px;
+    border: 1.5px solid var(--background-dif);
+    -webkit-box-shadow: -2px -2px 40px 5px var(--background-dif);
+    -moz-box-shadow: -2px -2px 40px 5px var(--background-dif);
+    box-shadow: -2px -2px 40px 5px var(--background-dif);
 }
 .card-work span{
     position: absolute;
