@@ -7,6 +7,16 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+@font-face {
+  font-family: Coolvetica;
+  src: url("../assets/fonts/coolvetica/coolvetica rg.otf") format("opentype");
+}
+
+@font-face {
+  font-family: LaBelleAurore;
+  src: url("../assets/fonts/LaBelleAurore/labelleaurore/LaBelleAurore.ttf") format("truetype");
+}
+
 *,
 ::before,
 ::after {
@@ -1644,7 +1654,7 @@ tool-tip {
   font-size: 1.2rem;
   position: absolute;
   margin-top: -1.2rem;
-  left: 28%;
+  left: 32%;
   letter-spacing: 0;
 }
 
@@ -1655,7 +1665,7 @@ tool-tip {
   font-style: italic;
   font-size: 1.2rem;
   position: absolute;
-  left: 28%;
+  left: 32%;
   margin-top: 1.5rem;
   letter-spacing: 0;
 }
@@ -1672,7 +1682,7 @@ tool-tip {
   align-items: center;
   overflow: hidden;
   padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 7rem;
   background-color: #1D1D1D;
   background: radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #1D1D1D 20%, #1D1D1D 80%, transparent 80%, transparent) 17.5px 17.5px, linear-gradient(#2A2A2A 1.4000000000000001px, transparent 1.4000000000000001px) 0 -0.7000000000000001px, linear-gradient(90deg, #2A2A2A 1.4000000000000001px, #1D1D1D 1.4000000000000001px) -0.7000000000000001px 0;
   background-size: 35px 35px, 35px 35px, 17.5px 17.5px, 17.5px 17.5px;
@@ -1705,7 +1715,7 @@ tool-tip {
   /* padding-left: 4.5rem; */
   animation: enter-text 3s ease;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 #section-work h2 {
@@ -1775,21 +1785,18 @@ tool-tip {
   transition: all 0.2s ease;
 }
 
-.card-work:nth-child(1) span{
-  background-color: whitesmoke;
+/* .card-work:nth-child(1) span{
+    background-color: whitesmoke;
 }
-
 .card-work:nth-child(2) span{
-  background-color: purple;
+    background-color: purple;
 }
-
 .card-work:nth-child(3) span{
-  background-color: red;
+    background-color: red;
 }
-
 .card-work:nth-child(4) span{
-  background-color: plum;
-}
+    background-color: #fb5d8c;
+} */
 
 .card-work a {
   width: 100%;
@@ -2155,14 +2162,29 @@ form #btn-send:hover {
     padding-left: 0rem;
   }
 
+  #section-skills{
+    width: 100%;
+    height: 100%;
+  }
+
   #section-skills .container-skills .skills-details{
     width: 50%;
-    height: 100%;
+    height: auto;
+    padding-top: 4rem;
+  }
+
+  .skills-details .card-info {
+    height: 17rem;
+  }
+
+  .skills-tools {
+    margin-bottom: 3rem;
   }
 
   #section-skills .container-skills .center-text {
     width: 50%;
-    height: 100%;
+    height: auto;
+    padding-top: 4rem;
   }
 
   #section-contact .center-text {
@@ -2171,6 +2193,22 @@ form #btn-send:hover {
 
   #section-contact .contact-map {
     width: 50%;
+  }
+
+  .scroll-arrow-left {
+    left: 0rem;
+  }
+
+  .scroll-arrow-right {
+    right: 0.5rem;
+  }
+
+  #section-work .center-text p:nth-child(2)::before{
+    left: 25%;
+  }
+
+  #section-work .center-text p:nth-child(3)::after{
+    left: 25%;
   }
 }
 
@@ -2203,6 +2241,7 @@ form #btn-send:hover {
 
   #section-work .center-text {
     padding-left: 3rem;
+    margin-top: 3rem;
   }
 
   #section-work h2 span{
@@ -2238,6 +2277,14 @@ form #btn-send:hover {
     padding-left: 1rem;
   }
 
+  #section-work .center-text p:nth-child(2)::before{
+    left: 30%;
+  }
+
+  #section-work .center-text p:nth-child(3)::after{
+    left: 30%;
+  }
+
   /**DISPLAY COLUMN SECTION SKILLS ******/
 
   #section-skills{
@@ -2247,13 +2294,23 @@ form #btn-send:hover {
     justify-content: center;
   }
 
+  #section-skills .container-skills{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   #section-skills .container-skills .skills-details{
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 100%;
     gap: 10px;
-    padding-left: 4rem;
     margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
   }
 
   #section-skills .container-skills .center-text {
@@ -2266,16 +2323,32 @@ form #btn-send:hover {
     padding-bottom: 1rem;
   }
 
+  #section-skills .skills-tools {
+    z-index: 10;
+    /* position: relative; */
+    width: 100%;
+    /* padding-left: 3rem; */
+    /* padding-bottom: 3rem; */
+  }
+
   .skills-details .card-info {
     gap: 25px;
     flex-direction: column;
     height: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
   }
 
   .skills-details .card-info .card-info-detail{
     width: 100%;
     height: 10rem;
+  }
+
+  .scroll-arrow-left {
+    left: 0rem;
+  }
+
+  .scroll-arrow-right {
+    right: 0.5rem;
   }
 }
 
@@ -2353,6 +2426,14 @@ form #btn-send:hover {
   #section-work .cards-works .card-work{
     height: 16rem;
     width: 16rem;
+  }
+
+  #section-work .center-text p:nth-child(2)::before{
+    left: 5%;
+  }
+
+  #section-work .center-text p:nth-child(3)::after{
+    left: 5%;
   }
 
   /******* DISPLAY COLUMN SECTION CONTACT  ********/

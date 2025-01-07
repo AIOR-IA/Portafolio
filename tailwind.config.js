@@ -12,6 +12,10 @@ module.exports = {
           to: { transform: 'translateX(-50%)' },
         },
       },
+      fontFamily: {
+        coolvetica: ['Coolvetica', 'sans-serif'],
+        labelle: ['LaBelleAurore', 'cursive'],
+      },
     },
   },
   plugins: [],
