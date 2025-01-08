@@ -873,7 +873,7 @@ tool-tip {
 }
 
 .skills-details .charts:nth-child(2) .charts-range{
-    width: 18%;
+    width: 60%;
     background-color: red;
 }
 
@@ -1381,6 +1381,7 @@ form #btn-send:hover {
     #section-about .effect-sphere{
         padding-right: 4rem;
     }
+   
 }
 @media only screen and (max-width:1500px){
     #section-work .card-work{
@@ -1392,6 +1393,8 @@ form #btn-send:hover {
     #section-about .effect-sphere{
         padding-right: 1rem;
     }
+
+   
 }
 @media only screen and (max-width:1300px){
     .toggle{
@@ -1436,7 +1439,8 @@ form #btn-send:hover {
 
     #section-skills{
         width: 100%;
-        height: 100%;
+        height: auto;
+
     }
 
     #section-skills .container-skills .skills-details{ 
@@ -1448,7 +1452,10 @@ form #btn-send:hover {
     .skills-details .card-info {
         height: 17rem;
     }
+
+   
     .skills-tools {
+        margin-top: 5rem;
         margin-bottom: 3rem;
     }
     #section-skills .container-skills .center-text {
@@ -1588,6 +1595,8 @@ form #btn-send:hover {
         width: 100%;
         /* padding-left: 3rem; */
         /* padding-bottom: 3rem; */
+        margin-top: 0rem;
+
         
     }
     .skills-details .card-info {
@@ -1784,4 +1793,7 @@ form #btn-send:hover {
         font-size: 15px;
     }
     
+    .skills-details .card-info .card-info-detail{
+        height: 100%;
+    }
 }
